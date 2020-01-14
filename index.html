@@ -9,14 +9,14 @@
   <body>
     <!-- Projected Approach
 [A] One Character, 8 Characters, In console, No User Input
-X1) Set variable for index of number characters (0-9)
-X2) Random number generator
-X3) Link RNG to reference index of variable
-X4) Loop 8 times, concate all values
+X) Set variable for index of number characters (0-9)
+X) Random number generator
+X) Link RNG to reference index of variable
+X) Loop 8 times, concate all values
 
 [B] Add User Input for Password Length
-1) Change generator code to accept user input
-2) Using prompt
+X) Change generator code to accept user input
+X) Using prompt
 3) Set limitations: Minimum 8, Maximum 128
 
 [C] One Character -> Four Characters
@@ -49,13 +49,22 @@ X4) Loop 8 times, concate all values
 
 [G] Tidy up -->
     <script>
+      var numCharArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+      var userInputLength = prompt(
+        "Please select a password length between 8-128"
+      );
       function rNGNumber() {
-        var numCharArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-        for (i = 0; i < 8; i++) {
+        for (i = 0; i < userInputLength; i++) {
           document.write(numCharArr[Math.floor(Math.random() * 10)]);
         }
       }
-      rNGNumber();
+      if (parseInt(userInputLength) < 8) {
+        console.log("Please select a password length between 8-128");
+      } else if (parseInt(userInputLength) > 128) {
+        console.log("Please select a password length between 8-128");
+      } else {
+        rNGNumber();
+      }
     </script>
   </body>
 </html>
