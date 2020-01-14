@@ -17,15 +17,15 @@ X) Loop 8 times, concate all values
 [B] Add User Input for Password Length
 X) Change generator code to accept user input
 X) Using prompt
-3) Set limitations: Minimum 8, Maximum 128
+X) Set limitations: Minimum 8, Maximum 128
 
 [C] One Character -> Four Characters
 1) Set up variables for arrays for all four types of characters
 2) Clean up code with JavaScript objects/loops/function
 
 [D] Print to Page
-1) Look up how to print to page
-2) Change console.log -> print to page
+X) Look up how to print to page
+X) Change console.log -> print to page
 
 [E] Add skeleton CSS
 1) Title
@@ -49,19 +49,57 @@ X) Using prompt
 
 [G] Tidy up -->
     <script>
+      var lowerCharArr = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z"
+      ];
       var numCharArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
       var userInputLength = prompt(
         "Please select a password length between 8-128"
       );
+
+      function passLengthLimit() {
+        if (parseInt(userInputLength) < 8) {
+          console.log("Please select a password length between 8-128");
+        } else if (parseInt(userInputLength) > 128) {
+          console.log("Please select a password length between 8-128");
+        }
+      }
+
       function rNGNumber() {
         for (i = 0; i < userInputLength; i++) {
           document.write(numCharArr[Math.floor(Math.random() * 10)]);
         }
       }
-      if (parseInt(userInputLength) < 8) {
-        console.log("Please select a password length between 8-128");
-      } else if (parseInt(userInputLength) > 128) {
-        console.log("Please select a password length between 8-128");
+
+      if (userInputLength < 8) {
+        passLengthLimit();
+      } else if (userInputLength > 128) {
+        passLengthLimit();
       } else {
         rNGNumber();
       }
