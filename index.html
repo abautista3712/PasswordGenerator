@@ -9,9 +9,10 @@
   <body>
     <!-- Projected Approach
 [A] One Character, 8 Characters, In console, No User Input
-1) Set up a variable for an array with one of the types of characters
-2) Random number generator for selection of one character
-3) Repeat for 8 characters
+1) Set variable for index of number characters (0-9)
+2) Random number generator
+3) Link RNG to reference index of variable
+4) Loop 8 times, concate all values
 
 [B] Add User Input for Password Length
 1) Change generator code to accept user input
@@ -47,5 +48,11 @@
 1) Add button to copy to Clipboard
 
 [G] Tidy up -->
+    <script>
+      var numCharArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+      for (i = 0; i < 8; i++) {
+        console.log(Math.floor(Math.random() * 10));
+      }
+    </script>
   </body>
 </html>
