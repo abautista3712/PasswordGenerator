@@ -49,6 +49,7 @@ X) Change console.log -> print to page
 
 [G] Tidy up -->
     <script>
+      // Make array with 4 numbers corresponding to different character types
       var lowerCaseArr = [
         "a",
         "b",
@@ -92,7 +93,7 @@ X) Change console.log -> print to page
           alert("Please select a password between 8-128 characters");
         }
       }
-
+      // Can likely add function to consolidate function for character type below
       function rNGUpperCase() {
         for (i = 0; i < userInputLength; i++) {
           document.write(upperCaseArr[Math.floor(Math.random() * 26)]);
@@ -111,8 +112,7 @@ X) Change console.log -> print to page
         }
       }
 
-      console.log(upperCaseArr);
-
+      // Code below is for checking for functionality.
       if (userInputLength < 8) {
         passLengthLimit();
       } else if (userInputLength > 128) {
