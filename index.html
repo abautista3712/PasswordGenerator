@@ -50,21 +50,24 @@ X) Change console.log -> print to page
 
 [G] Tidy up -->
     <!-- Header Box that contains h1 tag -->
-    <div class="contentHeader"><h1>Password Generator</h1></div>
+    <div id="contentHeader"><h1>Password Generator</h1></div>
     <!-- Background & Main Content Section -->
-    <div id="background">
-      <div class="contentBox">
-        <div id="passwordBox"></div>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
+    <div id="background" class="flex">
+      <div id="contentBox" class="flex">
+        <div id="passwordBox" class="flex">
+          <div id="buttonWrapper">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+          </div>
+        </div>
       </div>
     </div>
     <!-- Sticky Footer -->
-    <footer class="StickyFooter">
+    <footer id="StickyFooter">
       <div>Copyright ©</div>
     </footer>
     <script src="./script.js"></script>

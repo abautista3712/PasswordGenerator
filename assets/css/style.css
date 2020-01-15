@@ -1,0 +1,37 @@
+body {
+  margin: 0px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contentHeader {
+  text-align: center;
+  border-bottom: solid;
+}
+
+#contentBox {
+  height: 70vh;
+  width: 75vw;
+  border: solid;
+}
+
+#passwordBox {
+  height: 30vh;
+  width: 35vw;
+  border: solid;
+}
+
+#buttonWrapper {
+  position: relative;
+  bottom: -100px;
+}
+
+#StickyFooter {
+  flex-shrink: 0;
+  text-align: center;
+  border-top: solid;
+}
