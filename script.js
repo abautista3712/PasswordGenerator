@@ -67,6 +67,8 @@ var specialCharArr = [
   "\u007D",
   "\u007E"
 ];
+var CharArr = [lowerCaseArr, upperCaseArr, numCharArr, specialCharArr];
+
 // -> for user input prompt
 var userInputLength = prompt("Please select a password length between 8-128");
 
