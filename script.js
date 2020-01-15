@@ -68,7 +68,6 @@ var specialCharArr = [
   "\u007E"
 ];
 var CharArr = [lowerCaseArr, upperCaseArr, numCharArr, specialCharArr];
-
 // -> for user input prompt
 var userInputLength = prompt("Please select a password length between 8-128");
 
@@ -82,24 +81,21 @@ function passLengthLimit() {
   }
 }
 // -> for linking random number generator with 4 character types
-function rNGUpperCase() {
-  for (i = 0; i < userInputLength; i++) {
-    document.write(upperCaseArr[Math.floor(Math.random() * 26)]);
-  }
-}
-
 function rNGLowerCase() {
   for (i = 0; i < userInputLength; i++) {
     document.write(lowerCaseArr[Math.floor(Math.random() * 26)]);
   }
 }
-
+function rNGUpperCase() {
+  for (i = 0; i < userInputLength; i++) {
+    document.write(upperCaseArr[Math.floor(Math.random() * 26)]);
+  }
+}
 function rNGNumber() {
   for (i = 0; i < userInputLength; i++) {
     document.write(numCharArr[Math.floor(Math.random() * 10)]);
   }
 }
-
 function rNGSpecial() {
   for (i = 0; i < userInputLength; i++) {
     document.write(specialCharArr[Math.floor(Math.random() * 33)]);
