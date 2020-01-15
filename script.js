@@ -1,4 +1,5 @@
-// // Make array with 4 numbers corresponding to different character types
+// Variables
+// -> for arrays containing string values for 4 different character types
 var lowerCaseArr = [
   "a",
   "b",
@@ -66,8 +67,11 @@ var specialCharArr = [
   "\u007D",
   "\u007E"
 ];
+// -> for user input prompt
 var userInputLength = prompt("Please select a password length between 8-128");
 
+// Functions
+// -> for lower and upper limits on password character length
 function passLengthLimit() {
   if (parseInt(userInputLength) < 8) {
     alert("Please select a password between 8-128 characters");
@@ -75,7 +79,7 @@ function passLengthLimit() {
     alert("Please select a password between 8-128 characters");
   }
 }
-// // Can likely add function to consolidate function for character type below
+// -> for linking random number generator with 4 character types
 function rNGUpperCase() {
   for (i = 0; i < userInputLength; i++) {
     document.write(upperCaseArr[Math.floor(Math.random() * 26)]);
@@ -100,7 +104,8 @@ function rNGSpecial() {
   }
 }
 
-// Code below is for checking for functionality.
+// Function Calls
+// -> testing for functionality / not final function call
 if (userInputLength < 8) {
   passLengthLimit();
 } else if (userInputLength > 128) {
