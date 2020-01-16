@@ -49,9 +49,15 @@ button {
   border: solid;
 }
 
-#userOptionsWrapper {
+#charLengthWrapper {
     display: flex;
 }
+
+#charTypeWrapper {
+    display: flex;
+}
+
+
 
 #charTypePrompt {
 }
