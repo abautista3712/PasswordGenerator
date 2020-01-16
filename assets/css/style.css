@@ -44,8 +44,7 @@ button {
 }
 
 #passwordBox {
-  height: 30px;
-  width: 50vw;
+  height: 25vh;
   border: solid;
 }
 
