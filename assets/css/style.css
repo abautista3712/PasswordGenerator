@@ -18,6 +18,7 @@ body {
 #contentHeader {
   text-align: center;
   border: solid;
+  border-radius: 15px 15px 0px 0px;
 }
 
 #contentBox {
@@ -39,3 +40,4 @@ body {
   flex-shrink: 0;
   text-align: center;
   border: solid;
+  border-radius: 0px 0px 15px 15px;
