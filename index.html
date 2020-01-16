@@ -55,27 +55,39 @@ X) Copy to Clipboard Button
         <div id="contentBox" class="flex">
           <div id="passButtonWrapper">
             <div id="passwordBox" class="flex"></div>
-            <div id=charLengthWrapper>
-            <div id="charLengthPrompt">Choose Password Length (8-128 characters):</div>
-            <input type="text" name="charLength">
+            <div id="charLengthWrapper">
+              <div id="charLengthPrompt">
+                Choose Password Length (8-128 characters):
+              </div>
+              <input type="text" name="charLength" />
             </div>
             <div id="charTypeWrapper">
-            <div id="charTypePrompt">
-              Select up to 4 character types:
-            </div>
-            <div id="buttonWrapperTop">
-              <div class="buttonTop"><input type="checkbox" class="buttonSize"></input>Lowercase</div>
-              <div class="buttonTop"><input type="checkbox" class="buttonSize"></input>Uppercase</div>
-              <div class="buttonTop"><input type="checkbox" class="buttonSize"></input>Numeric</div class="buttonMargin">
-              <div class="buttonTop"><input type="checkbox" class="buttonSize"></input>Special</div class="buttonMargin">
-            </div>
+              <div id="charTypePrompt">
+                Select up to 4 character types:
+              </div>
+              <div id="buttonWrapperTop">
+                <div class="buttonTop">
+                  <input type="checkbox" class="buttonSize" />Lowercase
+                </div>
+                <div class="buttonTop">
+                  <input type="checkbox" class="buttonSize" />Uppercase
+                </div>
+                <div class="buttonTop">
+                  <input type="checkbox" class="buttonSize" />Numeric
+                </div>
+                <div class="buttonTop">
+                  <input type="checkbox" class="buttonSize" />Special
+                </div>
+              </div>
             </div>
             <div id="buttonWrapperBot">
-              <button id="generatePass" class="buttonBot">Generate Password</button>
+              <button id="generatePass" class="buttonBot">
+                Generate Password
+              </button>
               <button class="buttonBot">Copy</button>
             </div>
-            </div>
           </div>
+        </div>
         <footer id="contentFooter">
           <div>Copyright ©</div>
         </footer>
