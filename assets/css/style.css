@@ -8,9 +8,12 @@ body {
   justify-content: center;
 }
 
+#contentWrapper {
+}
+
 #contentHeader {
   text-align: center;
-  border-bottom: solid;
+  border: solid;
 }
 
 #contentBox {
@@ -30,8 +33,7 @@ body {
   bottom: -100px;
 }
 
-#StickyFooter {
+#contentFooter {
   flex-shrink: 0;
   text-align: center;
-  border-top: solid;
-}
+  border: solid;
