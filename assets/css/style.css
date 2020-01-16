@@ -29,6 +29,7 @@ button {
 }
 
 #contentWrapper {
+    width: fit-content;
 }
 
 #contentHeader {
@@ -53,11 +54,9 @@ button {
 }
 
 #charTypePrompt {
-    float: left;
 }
 
 #buttonWrapperTop {
-    float: left;
 }
 
 #buttonWrapperBot {
