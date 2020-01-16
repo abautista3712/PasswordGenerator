@@ -49,11 +49,15 @@ button {
   border: solid;
 }
 
-#charSelect {
-    margin-top: 5%;
+#userOptionsWrapper {
+}
+
+#charSelectPrompt {
+    float: left;
 }
 
 #buttonWrapperTop {
+    float: left;
 }
 
 #buttonWrapperBot {
