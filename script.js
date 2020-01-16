@@ -67,7 +67,7 @@ var specialCharArr = [
   "\u007D",
   "\u007E"
 ];
-var CharArr = [lowerCaseArr, upperCaseArr, numCharArr, specialCharArr];
+var charArr = [lowerCaseArr, upperCaseArr, numCharArr, specialCharArr];
 // -> for user input prompt
 var inputLength = document.querySelector("#inputLength");
 
