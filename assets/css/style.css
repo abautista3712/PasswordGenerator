@@ -35,6 +35,7 @@ body {
 }
 
 #contentBox {
+    min-height: 0vh;
   height: 70vh;
   width: 75vw;
   border: solid;
