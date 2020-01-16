@@ -60,7 +60,9 @@ button {
 }
 
 #buttonWrapperBot {
-    margin: 5% 0px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 #contentFooter {
