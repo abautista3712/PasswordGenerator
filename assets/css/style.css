@@ -49,6 +49,7 @@ button {
 }
 
 #userOptionsWrapper {
+    display: flex;
 }
 
 #charTypePrompt {
