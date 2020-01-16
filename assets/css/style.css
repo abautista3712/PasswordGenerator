@@ -1,16 +1,11 @@
+/* Tags */
 body {
   margin: 0px;
 }
 
-button {
-}
-
+/* Classes */
 .buttonTop {
     margin: 0px 4px;
-}
-
-.buttonBot {
-
 }
 
 .buttonSize {
@@ -24,6 +19,7 @@ button {
   justify-content: center;
 }
 
+/* IDs */
 #background {
     margin: 2% 0px;
 }
@@ -55,14 +51,6 @@ button {
 
 #charTypeWrapper {
     display: flex;
-}
-
-
-
-#charTypePrompt {
-}
-
-#buttonWrapperTop {
 }
 
 #buttonWrapperBot {
