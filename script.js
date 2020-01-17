@@ -68,6 +68,7 @@ var specialCharArr = [
   "\u007E"
 ];
 var charArr = [lowerCaseArr, upperCaseArr, numCharArr, specialCharArr];
+var targetArr = assignCharArr();
 // -> for user input prompt
 var inputLength = document.querySelector("#inputLength");
 var targetPassword = document.querySelector("#password");
@@ -85,6 +86,7 @@ function passLengthLimit() {
 // i) Create variable to save generated password: var password = function()
 // ii) Print password variable to page
 // Fix for loop variables
+
 function assignCharArr() {
   for (i = 0; i < 1; i++) {
     return charArr[Math.floor(Math.random() * 4)];
@@ -92,15 +94,16 @@ function assignCharArr() {
 }
 
 function assignCharValue() {
-  for (j = 0; j < assignCharArr().length; j++) {
-    return assignCharArr()[Math.floor(Math.random() * assignCharArr().length)];
+  for (j = 0; j < targetArr.length; j++) {
+    return targetArr[Math.floor(Math.random() * targetArr.length)];
   }
 }
 
+console.log(assignCharValue());
+
 function rNGLowerCase() {
-  for (i = 0; i < inputLength.value; i++) {
-    targetPassword.textContent = lowerCaseArr[Math.floor(Math.random() * 26)];
-    // console.log(lowerCaseArr[Math.floor(Math.random() * 26)]);
+  for (k = 0; k < lowerCaseArr.length; k++) {
+    return lowerCaseArr[Math.floor(Math.random() * lowerCaseArr.length)];
   }
 }
 function rNGUpperCase() {
@@ -121,12 +124,12 @@ function rNGSpecial() {
 
 // Function Calls
 // -> testing for functionality / not final function call
-document.querySelector("#generatePass").addEventListener("click", function() {
-  if (inputLength.value < 8) {
-    passLengthLimit();
-  } else if (inputLength.value > 128) {
-    passLengthLimit();
-  } else {
-    console.log(assignCharValue());
-  }
-});
+// document.querySelector("#generatePass").addEventListener("click", function() {
+//   if (inputLength.value < 8) {
+//     passLengthLimit();
+//   } else if (inputLength.value > 128) {
+//     passLengthLimit();
+//   } else {
+//     console.log(assignCharValue());
+//   }
+// });
