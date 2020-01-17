@@ -68,7 +68,6 @@ var specialCharArr = [
   "\u007E"
 ];
 var charArr = [lowerCaseArr, upperCaseArr, numCharArr, specialCharArr];
-var targetArr = assignCharArr();
 // -> for user input prompt
 var inputLength = document.querySelector("#inputLength");
 var targetPassword = document.querySelector("#password");
@@ -82,7 +81,7 @@ function passLengthLimit() {
     alert("Please select a password between 8-128 characters");
   }
 }
-// -> for linking random number generator with 4 character types
+
 // i) Create variable to save generated password: var password = function()
 // ii) Print password variable to page
 // Fix for loop variables
@@ -94,12 +93,11 @@ function assignCharArr() {
 }
 
 function assignCharValue() {
+  var targetArr = assignCharArr();
   for (j = 0; j < targetArr.length; j++) {
     return targetArr[Math.floor(Math.random() * targetArr.length)];
   }
 }
-
-console.log(assignCharValue());
 
 function rNGLowerCase() {
   for (k = 0; k < lowerCaseArr.length; k++) {
@@ -124,12 +122,12 @@ function rNGSpecial() {
 
 // Function Calls
 // -> testing for functionality / not final function call
-// document.querySelector("#generatePass").addEventListener("click", function() {
-//   if (inputLength.value < 8) {
-//     passLengthLimit();
-//   } else if (inputLength.value > 128) {
-//     passLengthLimit();
-//   } else {
-//     console.log(assignCharValue());
-//   }
-// });
+document.querySelector("#generatePass").addEventListener("click", function() {
+  if (inputLength.value < 8) {
+    passLengthLimit();
+  } else if (inputLength.value > 128) {
+    passLengthLimit();
+  } else {
+    console.log(assignCharValue());
+  }
+});
