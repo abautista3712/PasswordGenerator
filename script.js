@@ -91,13 +91,9 @@ function assignCharArr() {
   }
 }
 
-assignCharValue();
-
 function assignCharValue() {
   for (j = 0; j < assignCharArr().length; j++) {
-    console.log(
-      assignCharArr()[Math.floor(Math.random() * assignCharArr().length)]
-    );
+    return assignCharArr()[Math.floor(Math.random() * assignCharArr().length)];
   }
 }
 
@@ -125,15 +121,12 @@ function rNGSpecial() {
 
 // Function Calls
 // -> testing for functionality / not final function call
-// document.querySelector("#generatePass").addEventListener("click", function() {
-//   if (inputLength.value < 8) {
-//     passLengthLimit();
-//   } else if (inputLength.value > 128) {
-//     passLengthLimit();
-//   } else {
-//     rNGLowerCase();
-// rNGUpperCase();
-// rNGNumber();
-// rNGSpecial();
-//   }
-// });
+document.querySelector("#generatePass").addEventListener("click", function() {
+  if (inputLength.value < 8) {
+    passLengthLimit();
+  } else if (inputLength.value > 128) {
+    passLengthLimit();
+  } else {
+    console.log(assignCharValue());
+  }
+});
