@@ -41,8 +41,8 @@ X) Copy to Clipboard Button
 X) When user clicks on button, script runs to generate password
 
 [G] Print to Screen pt. 2
-1) Insert output to print in password box
-2) Adjust positioning accordingly
+X) Insert output to print in password box
+X) Adjust positioning accordingly
 
 [H] User Selectable Parameters
 1) Add/link buttons to change which character types are generated (RNG onto for-loop of charArr)
@@ -59,7 +59,9 @@ X) Look into changing prompt -> user text box in page
         <div id="contentHeader"><h1>Password Generator</h1></div>
         <div id="contentBox" class="flex">
           <div id="passButtonWrapper">
-            <div id="passwordBox" class="flex"></div>
+            <div id="passwordBox" class="flex">
+              <p id="password"></p>
+            </div>
             <div id="charLengthWrapper">
               <div id="charLengthPrompt">
                 Choose Password Length (8-128 characters):

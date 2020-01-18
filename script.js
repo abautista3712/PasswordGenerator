@@ -68,9 +68,9 @@ var specialCharArr = [
   "\u007E"
 ];
 var charArr = [lowerCaseArr, upperCaseArr, numCharArr, specialCharArr];
-// -> for user input prompt
-var inputLength = document.querySelector("#inputLength");
+// -> for targeting specific HTML elements
 var targetPassword = document.querySelector("#password");
+var inputLength = document.querySelector("#inputLength");
 
 // Functions
 // -> for lower and upper limits on password character length
@@ -81,24 +81,20 @@ function passLengthLimit() {
     alert("Please select a password between 8-128 characters");
   }
 }
-
-// i) Create variable to save generated password: var password = function()
-// ii) Print password variable to page
-// Fix for loop variables
-
+// -> for selecting which of the four character type arrays to use
 function assignCharArr() {
   for (i = 0; i < 1; i++) {
     return charArr[Math.floor(Math.random() * 4)];
   }
 }
-
+// -> for selecting what specific character to use from the chosen array
 function assignCharValue() {
   var targetArr = assignCharArr();
   for (j = 0; j < targetArr.length; j++) {
     return targetArr[Math.floor(Math.random() * targetArr.length)];
   }
 }
-
+// for repeating the character selection function assignCharValue()
 function assignCharLength(_string, times) {
   var repeatString = "";
   while (times > 0) {
@@ -108,29 +104,10 @@ function assignCharLength(_string, times) {
   return repeatString;
 }
 
-function rNGLowerCase() {
-  for (k = 0; k < lowerCaseArr.length; k++) {
-    return lowerCaseArr[Math.floor(Math.random() * lowerCaseArr.length)];
-  }
-}
-function rNGUpperCase() {
-  for (i = 0; i < inputLength.value; i++) {
-    targetPassword.textContent = upperCaseArr[Math.floor(Math.random() * 26)];
-  }
-}
-function rNGNumber() {
-  for (i = 0; i < inputLength.value; i++) {
-    targetPassword.textContent = numCharArr[Math.floor(Math.random() * 10)];
-  }
-}
-function rNGSpecial() {
-  for (i = 0; i < inputLength.value; i++) {
-    targetPassword.textContent = specialCharArr[Math.floor(Math.random() * 33)];
-  }
-}
-
 // Function Calls
-// -> testing for functionality / not final function call
+// -> adds onclick event for Generate Password button.
+// -> when clicked function call checks user input to be within defined character limits.
+// -> if within limit, function call will will run assignCharLength() and repeat the function in accordance with user input for password length.
 document.querySelector("#generatePass").addEventListener("click", function() {
   if (inputLength.value < 8) {
     passLengthLimit();
