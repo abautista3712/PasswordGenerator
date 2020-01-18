@@ -71,6 +71,12 @@ var charArr = [lowerCaseArr, upperCaseArr, numCharArr, specialCharArr];
 // -> for targeting specific HTML elements
 var targetPassword = document.querySelector("#password");
 var inputLength = document.querySelector("#inputLength");
+var targetLowerCheck = document.querySelector("#lowerCheck");
+var targetUpperCheck = document.querySelector("#upperCheck");
+var targetNumberCheck = document.querySelector("#numberCheck");
+var targetSpecialCheck = document.querySelector("#specialCheck");
+
+
 
 // Functions
 // -> for lower and upper limits on password character length
@@ -84,6 +90,9 @@ function passLengthLimit() {
 // -> for selecting which of the four character type arrays to use
 function assignCharArr() {
   for (i = 0; i < 1; i++) {
+      if(event.){
+
+      }
     return charArr[Math.floor(Math.random() * 4)];
   }
 }
