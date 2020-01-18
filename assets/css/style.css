@@ -42,8 +42,18 @@ body {
 }
 
 #passwordBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 25vh;
   border: solid;
+}
+
+#password {
+  text-align: center;
+  border: none;
+  height: 65%;
+  width: 100%;
 }
 
 #charLengthWrapper {

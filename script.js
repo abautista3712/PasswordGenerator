@@ -114,6 +114,6 @@ document.querySelector("#generatePass").addEventListener("click", function() {
   } else if (inputLength.value > 128) {
     passLengthLimit();
   } else {
-    targetPassword.textContent = assignCharLength(String, inputLength.value);
+    targetPassword.innerHTML = assignCharLength(String, inputLength.value);
   }
 });
