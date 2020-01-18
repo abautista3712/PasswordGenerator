@@ -66,7 +66,14 @@ X) Look into changing prompt -> user text box in page
               <div id="charLengthPrompt">
                 Choose Password Length (8-128 characters):
               </div>
-              <input id="inputLength" type="text" name="inputLength" />
+              <input
+                id="inputLength"
+                type="number"
+                name="inputLength"
+                maxlength="3"
+                min="8"
+                max="128"
+              />
             </div>
             <div id="charTypeWrapper">
               <div id="charTypePrompt">
