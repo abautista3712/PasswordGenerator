@@ -99,6 +99,15 @@ function assignCharValue() {
   }
 }
 
+function assignCharLength(_string, times) {
+  var repeatString = "";
+  while (times > 0) {
+    repeatString += assignCharValue();
+    times--;
+  }
+  return repeatString;
+}
+
 function rNGLowerCase() {
   for (k = 0; k < lowerCaseArr.length; k++) {
     return lowerCaseArr[Math.floor(Math.random() * lowerCaseArr.length)];
@@ -128,6 +137,6 @@ document.querySelector("#generatePass").addEventListener("click", function() {
   } else if (inputLength.value > 128) {
     passLengthLimit();
   } else {
-    console.log(assignCharValue());
+    targetPassword.textContent = assignCharLength(String, inputLength.value);
   }
 });
