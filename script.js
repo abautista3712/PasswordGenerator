@@ -142,3 +142,10 @@ document.querySelector("#generatePass").addEventListener("click", function() {
     targetPassword.innerHTML = assignCharLength(String, inputLength.value);
   }
 });
+
+document.querySelector("#copyBtn").addEventListener("click", function() {
+  var passwordLoc = document.querySelector("#password");
+  passwordLoc.select();
+  document.execCommand("copy");
+  document.getSelection().removeAllRanges();
+});
