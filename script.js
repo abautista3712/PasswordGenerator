@@ -67,16 +67,13 @@ var specialCharArr = [
   "\u007D",
   "\u007E"
 ];
-var charArr = [lowerCaseArr, upperCaseArr, numCharArr, specialCharArr];
+// -> for consolidating arrays
+var charArr = [];
+var allArray = [lowerCaseArr, upperCaseArr, numCharArr, specialCharArr];
+var allNode = ["#lowerCheck", "#upperCheck", "#numberCheck", "#specialCheck"];
 // -> for targeting specific HTML elements
 var targetPassword = document.querySelector("#password");
 var inputLength = document.querySelector("#inputLength");
-var targetLowerCheck = document.querySelector("#lowerCheck");
-var targetUpperCheck = document.querySelector("#upperCheck");
-var targetNumberCheck = document.querySelector("#numberCheck");
-var targetSpecialCheck = document.querySelector("#specialCheck");
-
-
 
 // Functions
 // -> for lower and upper limits on password character length
@@ -87,20 +84,37 @@ function passLengthLimit() {
     alert("Please select a password between 8-128 characters");
   }
 }
+// -> for adding arrays to charArr
+function addArray(array, node) {
+  if (charArr.includes(array) === false) {
+    if (document.querySelector(node).checked === true) {
+      charArr.push(array);
+    }
+  }
+}
+function removeArray(array, node) {
+  if (charArr.includes(array) === true) {
+    if (document.querySelector(node).checked === false) {
+      charArr.pop(array);
+    }
+  }
+}
+function checkAllArray() {
+  for (i = 0; i < 4; i++) {
+    removeArray(allArray[i], allNode[i]);
+    addArray(allArray[i], allNode[i]);
+  }
+}
 // -> for selecting which of the four character type arrays to use
 function assignCharArr() {
   for (i = 0; i < 1; i++) {
-      if(event.){
-
-      }
-    return charArr[Math.floor(Math.random() * 4)];
+    return checkAllArray()[Math.floor(Math.random() * checkAllArray.length)];
   }
 }
 // -> for selecting what specific character to use from the chosen array
 function assignCharValue() {
-  var targetArr = assignCharArr();
-  for (j = 0; j < targetArr.length; j++) {
-    return targetArr[Math.floor(Math.random() * targetArr.length)];
+  for (j = 0; j < assignCharArr.length; j++) {
+    return assignCharArr[Math.floor(Math.random() * assignCharArr.length)];
   }
 }
 // for repeating the character selection function assignCharValue()
@@ -118,11 +132,14 @@ function assignCharLength(_string, times) {
 // -> when clicked function call checks user input to be within defined character limits.
 // -> if within limit, function call will will run assignCharLength() and repeat the function in accordance with user input for password length.
 document.querySelector("#generatePass").addEventListener("click", function() {
-  if (inputLength.value < 8) {
-    passLengthLimit();
-  } else if (inputLength.value > 128) {
-    passLengthLimit();
-  } else {
-    targetPassword.innerHTML = assignCharLength(String, inputLength.value);
-  }
+  // if (inputLength.value < 8) {
+  //   passLengthLimit();
+  // } else if (inputLength.value > 128) {
+  //   passLengthLimit();
+  // } else {
+  //   checkAllArray();
+  //   targetPassword.innerHTML = assignCharLength(String, inputLength.value);
+  // }
+  checkAllArray();
+  console.log(charArr);
 });
