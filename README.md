@@ -1,6 +1,7 @@
 # PasswordGenerator
 
-[Alt text](./assets/images/PasswordGeneratorScreenshot.PNG?raw=true "Password Generator")
+![PasswordGenerator Screenshot](./assets/images/PasswordGeneratorScreenshot.PNG?raw=true "PasswordGenerator Screenshot")
+
 PasswordGenerator is a web application designed to create random passwords per user specification. Passwords can be customized to be between 8-128 characters and can include between one and four different character types (lowercase, uppercase, number, special). PasswordGenerator is hosted on GitHub and is designed to be mobile responsive.
 
 ## Installation
