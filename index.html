@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="./assets/css/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>PasswordGenerator</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Password Generator</title>
   </head>
   <body>
+    <!-- Background -->
     <div id="background" class="flex">
       <div id="contentWrapper">
+        <!-- Header -->
         <div id="contentHeader"><h1>Password Generator</h1></div>
         <div id="contentBox">
           <div id="passButtonWrapper">
+            <!-- Password Box -->
             <div id="passwordBox">
               <textarea id="password" class="flex"></textarea>
             </div>
+            <!-- Choose Password Length Row -->
             <div id="charLengthWrapper">
               <div id="charLengthPrompt">
                 Choose Password Length (8-128 characters):
@@ -29,6 +34,7 @@
                 max="128"
               />
             </div>
+            <!-- "Select up to 4 character types" Wrapper -->
             <div id="charTypeWrapper">
               <div id="charTypePrompt">
                 Select up to 4 character types:
@@ -64,24 +70,30 @@
                 </div>
               </div>
             </div>
+            <!-- Generate Password and Copy Buttons Row -->
             <div id="buttonWrapperBot">
+              <!-- Generate Password Button -->
               <button id="generatePass" class="buttonBot">
                 Generate Password
               </button>
+              <!-- Copy to Clipboard Button -->
               <button id="copyBtn" class="buttonBot">Copy</button>
             </div>
           </div>
         </div>
+        <!-- Copyright Footer -->
         <footer id="contentFooter">
           <div>Copyright ©</div>
         </footer>
       </div>
     </div>
+    <!-- jQuery CDN -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
+    <!-- Link to external script.js -->
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
