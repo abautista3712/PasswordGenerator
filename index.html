@@ -9,23 +9,48 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Password Generator</title>
   </head>
   <body>
+    <div class="container">
+      <div class="row">
+        <div id="contentHeader" class="col s12">
+          <h1>Password Generator</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div id="passwordBox" class="col s12">
+          <textarea name="password" id="password" class="flex" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="charLengthPrompt" type="number" class="validate">
+          <label for="charLengthPrompt">Choose Password Length (8-128 Characters)</label>
+        </div>
+        <div class="col s6">
+          <label>
+            <input type="checkbox" class="filled-in" checked="checked">
+          </label>
+        </div>
+      </div>
+    </div>
+    
     <!-- Background -->
-    <div id="background" class="flex">
-      <div id="contentWrapper">
+    <!-- <div id="background" class="flex"> -->
+      <!-- <div id="contentWrapper"> -->
         <!-- Header -->
-        <div id="contentHeader"><h1>Password Generator</h1></div>
-        <div id="contentBox">
-          <div id="passButtonWrapper">
+        <!-- <div id="contentHeader"><h1>Password Generator</h1></div> -->
+        <!-- <div id="contentBox"> -->
+          <!-- <div id="passButtonWrapper"> -->
             <!-- Password Box -->
-            <div id="passwordBox">
+            <!-- <div id="passwordBox">
               <textarea id="password" class="flex"></textarea>
-            </div>
+            </div> -->
             <!-- Choose Password Length Row -->
-            <div id="charLengthWrapper">
+            <!-- <div id="charLengthWrapper">
               <div id="charLengthPrompt">
                 Choose Password Length (8-128 characters):
               </div>
@@ -37,7 +62,7 @@
                 min="8"
                 max="128"
               />
-            </div>
+            </div> -->
             <!-- "Select up to 4 character types" Wrapper -->
             <div id="charTypeWrapper">
               <div id="charTypePrompt">
