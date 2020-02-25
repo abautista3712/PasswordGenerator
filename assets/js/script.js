@@ -1,4 +1,4 @@
-// Variables
+// -----Variables-----
 // -> for arrays containing string values for 4 different character types
 var lowerCaseArr = [
   "a",
@@ -75,7 +75,7 @@ var allNode = ["#lowerCheck", "#upperCheck", "#numberCheck", "#specialCheck"];
 var targetPassword = document.querySelector("#password");
 var inputLength = document.querySelector("#inputLength");
 
-// Functions
+// -----Functions-----
 // -> for lower and upper limits on password character length
 function passLengthLimit() {
   if (parseInt(inputLength.value) < 8) {
@@ -128,7 +128,7 @@ function assignCharLength(_string, times) {
   return repeatString;
 }
 
-// Function Calls
+// -----Function Calls-----
 // -> adds onclick event for Generate Password button.
 // -> when clicked function call checks user input to be within defined character limits.
 // -> if within limit, function call will will run assignCharLength() and repeat the function in accordance with user input for password length.
